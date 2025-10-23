@@ -6,13 +6,13 @@ function App() {
   const [greeting, setGreeting] = useState('');
  
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/')
+    fetch('https://fb-backend-dpgacwh3ckc5gbad.centralindia-01.azurewebsites.net')
       .then((res) => res.json())
       .then((data) => setMessage(data.message));
   }, []);
  
   const handleGreet = () => {
-    fetch(`http://127.0.0.1:8000/api/hello?name=${name}`)
+    fetch(`https://fb-backend-dpgacwh3ckc5gbad.centralindia-01.azurewebsites.net/api/hello?name=${name}`)
       .then((res) => res.json())
       .then((data) => setGreeting(data.greeting));
   };
